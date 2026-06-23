@@ -1,0 +1,1 @@
+Etabli Focus is a Pomodoro and focus-session tracker. Track work blocks by category (deep work, review, admin, research, manuscript, data analysis) with configurable focus and break durations and local notifications. Timers survive force-quit and reboot. Entirely offline.
