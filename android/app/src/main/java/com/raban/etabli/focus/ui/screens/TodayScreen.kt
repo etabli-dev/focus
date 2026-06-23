@@ -341,7 +341,7 @@ private fun Calendar.startOfDayMillis(): Long {
 }
 
 internal fun CategoryEntity.color(): Color {
-    val v = colorHex.toLongOrNull(16) ?: return Color(0xFF28A745)
+    val v = colorHex.toLongOrNull(16) ?: return CoderColors.AccentLight
     val r = ((v shr 16) and 0xFF) / 255f
     val g = ((v shr 8) and 0xFF) / 255f
     val b = (v and 0xFF) / 255f
