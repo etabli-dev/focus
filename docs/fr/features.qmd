@@ -3,67 +3,54 @@ title: "Fonctionnalités"
 sidebar: fr
 ---
 
-Focus est volontairement petit : un minuteur, des catégories, un historique. Rien de plus.
+Une visite guidée d'Établi Focus v0.1.0, écran par écran. Chaque figure ci-dessous est une vraie capture d'écran de la version de développement v0.1.0 exécutée sur un émulateur Android. Focus est volontairement petit : définir des objectifs par catégorie et par jour de la semaine, lancer un bloc de concentration minuté, et voir ses statistiques s'accumuler au fil du temps — entièrement hors ligne, sans compte, sans télémétrie.
 
-## Modules
+## Aujourd'hui
 
-| Zone | Fonction |
-|------|----------|
-| **Aujourd'hui** | Minuteur actif, sélection rapide de catégorie, aperçu du jour. |
-| **Catégories** | Catégories prédéfinies et personnelles avec couleur et durées par défaut. |
-| **Historique** | Séances passées par jour/semaine, avec totaux par catégorie. |
-| **Paramètres** | Durée par défaut de concentration et de pause, thème (Clair/Sombre/Système). |
+L'écran d'accueil s'ouvre sur **Aujourd'hui**. Il affiche la date du jour sous forme de fil d'Ariane façon terminal, une carte **maintenant** (ce qui tourne actuellement, ou une invitation à démarrer), le **plan du jour** (vos objectifs pour ce jour de la semaine) et une action **démarrer un bloc**. C'est le chemin le plus court vers une séance : tout ce qu'il faut pour commencer tient sur un seul écran.
 
-### Vue du jour
+![Aujourd'hui — l'écran d'accueil avec la carte « maintenant », le plan du jour et l'action démarrer un bloc.](../_screens/0.1.0/01-today.png){width=320}
 
-Le chemin le plus court vers une séance : choisir une catégorie, lancer le minuteur, garder la journée en vue.
+## Démarrer un bloc de concentration
 
-![Vue du jour avec une séance en cours.](../_screens/android-today.png){width=320}
+Toucher **démarrer un bloc** déploie le sélecteur de catégorie. Chaque catégorie porte ses propres durées de concentration et de pause (par exemple 50 min de concentration · 10 min de pause) ; il suffit donc d'en choisir une pour lancer une séance minutée — sans réglage supplémentaire au démarrage.
 
-### Catégories
+![Démarrer un bloc — le sélecteur de catégorie déployé, chaque entrée indiquant ses propres durées de concentration et de pause.](../_screens/0.1.0/06-start-block.png){width=320}
 
-Les catégories prédéfinies sont créées à l'installation ; on peut en ajouter d'autres. Chaque catégorie a un nom et une couleur reprise dans les graphiques et l'historique.
+## Modèle — objectifs par jour de la semaine
 
-![Liste des catégories avec pastille de couleur.](../_screens/android-categories.png){width=320}
+**Modèle** est l'endroit où l'on définit les objectifs par catégorie et par jour de la semaine. Une fois un modèle en place, le « plan du jour » de l'écran Aujourd'hui se remplit automatiquement pour le jour correspondant, ce qui évite de tout replanifier chaque matin.
 
-### Historique
+![Modèle — objectifs par catégorie définis pour chaque jour de la semaine.](../_screens/0.1.0/02-template.png){width=320}
 
-Totaux agrégés par catégorie, par jour et semaine — idéal pour vérifier sur quoi les blocs de concentration ont vraiment été consacrés.
+## Statistiques
 
-![Graphiques d'historique avec totaux par catégorie.](../_screens/android-stats.png){width=320}
+**Statistiques** agrège votre temps de concentration accompli afin de visualiser l'effort par catégorie et dans le temps. Les blocs individuels deviennent une image de l'usage réel des heures.
 
-### Paramètres
+![Statistiques — temps de concentration accompli, agrégé par catégorie et dans le temps.](../_screens/0.1.0/03-stats.png){width=320}
 
-Durées par défaut, thème, sons et notifications — les leviers utiles regroupés en un écran.
+## Catégories
 
-![Paramètres avec durées par défaut et choix de thème.](../_screens/android-settings.png){width=320}
+**Catégories** gère les catégories de concentration elles-mêmes : chacune a un nom, une couleur et les durées de concentration et de pause par défaut utilisées au lancement d'un bloc. La couleur est reprise dans le sélecteur de démarrage, le plan et les statistiques, pour qu'une catégorie reste reconnaissable partout.
 
-## Persistance
+![Catégories — nom, couleur et durées de concentration/pause par défaut pour chaque catégorie.](../_screens/0.1.0/04-categories.png){width=320}
 
-| Quoi | Où |
-|------|-----|
-| Séances, catégories, paramètres | base locale sur l'appareil. |
-| État du minuteur actif | persistant — survit au force-quit et au redémarrage, car début/fin sont stockés avec horodatage. |
+## Paramètres
 
-## Notifications
+**Paramètres** regroupe les préférences de l'appli, dont le thème (clair / sombre / système). On y retrouve aussi l'autorisation de notification qui signale la fin d'un bloc.
 
-| Déclencheur | Contenu |
-|-------------|---------|
-| Fin du bloc de concentration | Pause suggérée. |
-| Fin du bloc de pause | Indice qu'une nouvelle séance peut commencer. |
+![Paramètres — choix du thème et préférences de l'appli.](../_screens/0.1.0/05-settings.png){width=320}
 
-Toutes les notifications sont **locales** (`UNUserNotificationCenter` sur iOS, `NotificationManager` sur Android). Aucun service push.
+## Où l'obtenir
 
-## Garantie hors ligne
-
-Aucune activité réseau. L'appli ne contacte aucun serveur, n'envoie aucune télémétrie.
-
-## Distribution
+Établi Focus est **uniquement disponible sur Android** à ce stade et se présente sous la forme d'un APK de développement signé.
 
 | Canal | Statut |
 |-------|--------|
-| Android (APK) | **Version de développement** via [GitHub Releases](https://github.com/etabli-dev/etabli-focus/releases) |
-| App Store (iOS) | prévu — pas encore disponible |
+| Android (APK signé) | **Version de développement** — [version v0.1.0](https://github.com/etabli-dev/etabli-focus/releases/tag/v0.1.0) |
 | Google Play | prévu — pas encore disponible |
 | F-Droid | prévu — pas encore disponible |
+| App Store (iOS) | prévu — pas encore disponible |
 | Code source | [`etabli-dev/etabli-focus`](https://github.com/etabli-dev/etabli-focus) |
+
+Pour l'installer : téléchargez `focus-0.1.0.apk` depuis la page de version, ouvrez-le sur votre appareil et autorisez les notifications (utilisées pour signaler la fin d'un bloc).

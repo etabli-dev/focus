@@ -11,7 +11,7 @@ sidebar: de
 
 Établi Focus ist ein Pomodoro- und Fokus-Session-Tracker. Arbeitsblöcke werden nach Kategorie erfasst (Deep Work, Review, Admin, Forschung, Manuskript, Datenanalyse) mit konfigurierbaren Fokus- und Pausenzeiten und lokalen Benachrichtigungen. Timer überleben Force-Quit und Neustart. Vollständig offline.
 
-![Focus — Tagesansicht mit Kategorien und Verlauf.](../_screens/android-today.png){width=320}
+![Focus — Tagesansicht mit Kategorien und Verlauf.](../_screens/0.1.0/01-today.png){width=320}
 
 ## Wer profitiert davon
 

@@ -3,67 +3,54 @@ title: "Features"
 sidebar: en
 ---
 
-Focus is deliberately small: a timer, categories, history. Nothing beyond that.
+A guided walkthrough of Établi Focus v0.1.0, screen by screen. Every figure below is a real screenshot of the v0.1.0 development build running on an Android emulator. Focus is deliberately small: set per-weekday targets per category, start a timed focus block, and watch your stats build up over time — fully offline, no accounts, no telemetry.
 
-## Modules
+## Today
 
-| Area | What it does |
-|------|--------------|
-| **Today** | Active timer, quick category pick, day overview of past sessions. |
-| **Categories** | Built-in and custom categories with colour and default durations. |
-| **History** | Past sessions per day/week, with totals per category. |
-| **Settings** | Default focus and break duration, theme (Light/Dark/System). |
+The home screen opens on **Today**. It shows the current date as a terminal-style breadcrumb, a **now** card (what is currently running, or a prompt to start), **today's plan** (your targets for this weekday), and a **start a block** action. It is the fastest path to a session: everything you need to begin is on one screen.
 
-### Today view
+![Today — the home screen with the now card, today's plan, and the start-a-block action.](../_screens/0.1.0/01-today.png){width=320}
 
-Fastest way to a session: pick a category, start the timer, keep the day in sight.
+## Starting a focus block
 
-![Today view with a running session.](../_screens/android-today.png){width=320}
+Tapping **start a block** expands the category picker. Each category carries its own focus and break durations (for example 50 min focus · 10 min break), so picking one is all it takes to begin a timed session — no extra configuration at start time.
 
-### Categories
+![Start a block — the expanded category picker, each entry showing its own focus and break durations.](../_screens/0.1.0/06-start-block.png){width=320}
 
-Preset categories are created at install; new ones can be added. Every category has a name and a colour reused across charts and history.
+## Template — weekday targets
 
-![Categories list with a colour tag per entry.](../_screens/android-categories.png){width=320}
+**Template** is where you set targets per category per weekday. Once a template is in place, "today's plan" on the Today screen fills itself in automatically for the matching weekday, so you do not have to re-plan each morning.
 
-### History
+![Template — per-category targets set for each weekday.](../_screens/0.1.0/02-template.png){width=320}
 
-Aggregated totals per category, by day and week — ideal for checking what the focus blocks were actually spent on.
+## Stats
 
-![History charts with per-category totals.](../_screens/android-stats.png){width=320}
+**Stats** rolls up your completed focus time so you can see effort across categories and over time. It turns the individual blocks into a picture of where the hours actually went.
 
-### Settings
+![Stats — completed focus time aggregated across categories and over time.](../_screens/0.1.0/03-stats.png){width=320}
 
-Default durations, theme, sounds and notifications — the important switches in one screen.
+## Categories
 
-![Settings with default durations and theme picker.](../_screens/android-settings.png){width=320}
+**Categories** manages the focus categories themselves: each has a name, a colour, and the default focus and break lengths used when you start a block. The colour is reused across the start-a-block picker, the plan, and the stats so a category stays recognisable everywhere.
 
-## Persistence
+![Categories — name, colour, and default focus/break lengths per category.](../_screens/0.1.0/04-categories.png){width=320}
 
-| What | Where |
-|------|-------|
-| Sessions, categories, settings | local database on the device. |
-| Active timer state | persistent — survives force-quit and reboot, since start/end are stored with timestamps. |
+## Settings
 
-## Notifications
+**Settings** covers the app preferences, including the theme (light / dark / system). It also surfaces the notification permission that signals the end of a block.
 
-| Trigger | Content |
-|---------|---------|
-| Focus time over | Break suggested. |
-| Break time over | Hint that a new focus session can start. |
-
-All notifications are **local** (`UNUserNotificationCenter` on iOS, `NotificationManager` on Android). There is no push service.
-
-## Offline guarantee
-
-There is no network activity. The app does not reach any server, nor send any telemetry.
+![Settings — theme selection and app preferences.](../_screens/0.1.0/05-settings.png){width=320}
 
 ## Where to get it
 
+Établi Focus is **Android-only** at this stage and ships as a signed development-build APK.
+
 | Channel | Status |
 |---------|--------|
-| Android (APK) | **Development build** via [GitHub Releases](https://github.com/etabli-dev/etabli-focus/releases) |
-| App Store (iOS) | planned — not yet available |
+| Android (signed APK) | **Development build** — [v0.1.0 release](https://github.com/etabli-dev/etabli-focus/releases/tag/v0.1.0) |
 | Google Play | planned — not yet available |
 | F-Droid | planned — not yet available |
+| App Store (iOS) | planned — not yet available |
 | Source code | [`etabli-dev/etabli-focus`](https://github.com/etabli-dev/etabli-focus) |
+
+To install: download `focus-0.1.0.apk` from the release, open it on your device, and allow notifications (used to signal the end of a block).

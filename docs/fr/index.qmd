@@ -11,7 +11,7 @@ sidebar: fr
 
 Établi Focus est un tracker de séances Pomodoro et de concentration. Les blocs de travail sont enregistrés par catégorie (travail en profondeur, revue, admin, recherche, manuscrit, analyse de données) avec des durées de concentration et de pause configurables et des notifications locales. Les minuteurs survivent au force-quit et au redémarrage. Entièrement hors ligne.
 
-![Focus — vue du jour avec catégories et historique.](../_screens/android-today.png){width=320}
+![Focus — vue du jour avec catégories et historique.](../_screens/0.1.0/01-today.png){width=320}
 
 ## À qui ça s'adresse
 
